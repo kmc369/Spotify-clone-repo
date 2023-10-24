@@ -8,7 +8,7 @@ songs_bp = Blueprint('songs',__name__)
 
 @songs_bp.route("/playlist/<int:userid>", methods=["GET"])
 def get_songs_of_playlist(userid):
-    """GET ALL THE SONGS ON Playlist"""
+    """GET ALL THE SONGS ON Playlist function"""
 
     playlists = Playlist.query.filter_by(user_id =userid).all()
   
